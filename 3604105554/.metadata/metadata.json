@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Better Diplomacy Tooltips",
+	"id":	"",
+	"version":	"1.0",
+	"supported_game_version":	"1.0.3",
+	"short_description":	"Changes diplomacy map mode tooltips to show the relationships between the SELECTED country and the country you hover over",
+	"tags":	["Diplomacy", "User Interface"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

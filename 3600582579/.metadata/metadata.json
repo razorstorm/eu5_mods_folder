@@ -1,0 +1,13 @@
+﻿{
+	"name":	"Coloured Icons",
+	"id":	"k.coloured_icons",
+	"version":	"1.0",
+	"supported_game_version":	"1.*.*",
+	"short_description":	"Enhances the Europa Universalis V interface by recoloring key menu icons, making the menus stand out with a sharper, more vibrant look.",
+	"tags":	["User Interface"],
+	"picture": "thumbnail.png",
+	"relationships":	[],
+	"game_custom_data":	{
+		"multiplayer_synchronized" : true
+}
+}

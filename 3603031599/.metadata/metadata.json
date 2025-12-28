@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Good Icons",
+	"id":	"good_icons",
+	"version":	"1.0",
+	"supported_game_version":	"1.*.*",
+	"short_description":	"Blurry icons? No more!",
+	"tags":	["Fixes", "User Interface"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

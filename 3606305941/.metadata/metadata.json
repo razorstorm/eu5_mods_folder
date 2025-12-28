@@ -1,0 +1,12 @@
+﻿{
+	"name":	"Nobles Auto Marry",
+	"id":	"automarrynobles",
+	"version":	"1",
+	"supported_game_version":	"1.0.*",
+	"short_description":	"Adds a single event to auto marry unmarried members of the nobility to each other.",
+	"tags":	["Characters", "Utilities"],
+	"picture": "thumbnail.png",
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

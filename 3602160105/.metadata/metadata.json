@@ -1,0 +1,11 @@
+{
+	"name":	"Tick Speed Increase",
+	"id":	"eu5.tick_speed_increse",
+	"version":	"1.0",
+	"supported_game_version":	"1.0.*",
+	"short_description":	"Increases tick game speed",
+	"tags":	["Fixes"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

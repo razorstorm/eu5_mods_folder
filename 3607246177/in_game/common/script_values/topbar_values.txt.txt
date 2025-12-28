@@ -1,0 +1,11 @@
+parliament_base_support = {
+    value = modifier:parliament_base_support
+}
+
+cultural_influence = {
+	value = culture.cultural_influence
+}
+
+tax_efficiency = {
+	value = modifier:tax_income_efficiency
+}

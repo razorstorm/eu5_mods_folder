@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Extra Topbar Info",
+	"id":	"extra.topbar.info",
+	"version":	"0.1",
+	"supported_game_version":	"1.04",
+	"short_description":	"This mod adds additional information to the topbar, reducing the number of menus and tooltips you need to navigate.",
+	"tags":	["Fixes", "Gameplay", "Government and Estates", "User Interface", "Utilities"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}
