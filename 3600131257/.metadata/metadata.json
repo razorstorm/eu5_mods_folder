@@ -1,0 +1,12 @@
+﻿{
+	"name":	"Free Console Access",
+	"id":	"freeconsoleaccess",
+	"version":	"1",
+	"supported_game_version":	"1.*",
+	"short_description":	"Free Console Access",
+	"tags":	["Utilities"],
+	"picture": "thumbnail.png",
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}
