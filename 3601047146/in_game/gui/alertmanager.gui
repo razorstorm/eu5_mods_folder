@@ -2449,26 +2449,26 @@ types AlertManager {
 		# Our Truce will expire soon
 		############################
 
-		alert_banner = {
-			name = "truce_ending"
+		# alert_banner = {
+		# 	name = "truce_ending"
 
-			action_tooltip = {
-				click_type = left
-				title = "ALERT_CTA_LEFT_CLICK"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[OpenLateralViewWithParams('diplomacy', 'tabcontent = relations')]"
-			}
+		# 	action_tooltip = {
+		# 		click_type = left
+		# 		title = "ALERT_CTA_LEFT_CLICK"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[OpenLateralViewWithParams('diplomacy', 'tabcontent = relations')]"
+		# 	}
 
-			onmousehierarchyenter = "[SetHighlightedTab('diplomacy_group')]"
-			onmousehierarchyleave = "[ResetHighlightedTab]"
+		# 	onmousehierarchyenter = "[SetHighlightedTab('diplomacy_group')]"
+		# 	onmousehierarchyleave = "[ResetHighlightedTab]"
 
-			using = yellow_alert
-			using = alert_list_tooltip
+		# 	using = yellow_alert
+		# 	using = alert_list_tooltip
 
-			blockoverride "icon_texture" {
-				texture = "gfx/interface/icons/alerts_icons/truce_ending.dds"
-			}
-		}
+		# 	blockoverride "icon_texture" {
+		# 		texture = "gfx/interface/icons/alerts_icons/truce_ending.dds"
+		# 	}
+		# }
 
 		###################################
 		# Nearly maxed out stored research progress
@@ -2545,48 +2545,48 @@ types AlertManager {
 		# Unused cb
 		###########################
 
-		alert_banner = {
-			name = "has_casus_belli"
+		# alert_banner = {
+		# 	name = "has_casus_belli"
 
-			action_tooltip = {
-				click_type = left
-				title = "ALERT_CTA_CYCLE_LEFT_CLICK"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[AlertUnusedCB.Next]"
-			}
+		# 	action_tooltip = {
+		# 		click_type = left
+		# 		title = "ALERT_CTA_CYCLE_LEFT_CLICK"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[AlertUnusedCB.Next]"
+		# 	}
 
-			action_tooltip = {
-				click_modifier = shift
-				click_type = left
-				title = "ALERT_HINT"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[AlertUnusedCB.Next]"
-				on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_casus_belli')]"
-			}
+		# 	action_tooltip = {
+		# 		click_modifier = shift
+		# 		click_type = left
+		# 		title = "ALERT_HINT"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[AlertUnusedCB.Next]"
+		# 		on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_casus_belli')]"
+		# 	}
 
-			tooltipwidget = {
-				SimpleContextualRowTooltipType = {
-					lowpriotextcontext = "[AlertItem.GetTooltip]"
-					blockoverride "title_button" {
-						hint_button = {
-							action_tooltip = {
-								title = "OPEN_HINT"
-								on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_casus_belli')]"
-							}
-						}
-					}
-					blockoverride "shift_left_extra" {
-						replacement_shift_item = {}
-					}
-				}
-			}
+		# 	tooltipwidget = {
+		# 		SimpleContextualRowTooltipType = {
+		# 			lowpriotextcontext = "[AlertItem.GetTooltip]"
+		# 			blockoverride "title_button" {
+		# 				hint_button = {
+		# 					action_tooltip = {
+		# 						title = "OPEN_HINT"
+		# 						on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_casus_belli')]"
+		# 					}
+		# 				}
+		# 			}
+		# 			blockoverride "shift_left_extra" {
+		# 				replacement_shift_item = {}
+		# 			}
+		# 		}
+		# 	}
 
-			using = green_alert
+		# 	using = green_alert
 
-			blockoverride "icon_texture" {
-				texture = "gfx/interface/icons/alerts_icons/unused_cb.dds"
-			}
-		}
+		# 	blockoverride "icon_texture" {
+		# 		texture = "gfx/interface/icons/alerts_icons/unused_cb.dds"
+		# 	}
+		# }
 
 		###########################
 		# Unhappy Estates
@@ -5461,48 +5461,48 @@ types AlertManager {
 		# Has unraised levies in ongoing war
 		###################################
 
-		alert_banner = {
-			name = "has_unraised_levies_in_war"
+		# alert_banner = {
+		# 	name = "has_unraised_levies_in_war"
 
-			action_tooltip = {
-				click_type = left
-				title = "ALERT_CTA_CYCLE_LEFT_CLICK"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[AlertHasUnraisedLeviesInWar.Next]"
-			}
+		# 	action_tooltip = {
+		# 		click_type = left
+		# 		title = "ALERT_CTA_CYCLE_LEFT_CLICK"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[AlertHasUnraisedLeviesInWar.Next]"
+		# 	}
 
-			action_tooltip = {
-				click_modifier = shift
-				click_type = left
-				title = "ALERT_HINT"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[AlertHasUnraisedLeviesInWar.Next]"
-				on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_has_unraised_levies_in_war')]"
-			}
+		# 	action_tooltip = {
+		# 		click_modifier = shift
+		# 		click_type = left
+		# 		title = "ALERT_HINT"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[AlertHasUnraisedLeviesInWar.Next]"
+		# 		on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_has_unraised_levies_in_war')]"
+		# 	}
 			
-			tooltipwidget = {
-				SimpleContextualTooltipType = {
-					lowpriotextcontext = "[AlertItem.GetTooltip]"
-					blockoverride "title_button" {
-						hint_button = {
-							action_tooltip = {
-								title = "OPEN_HINT"
-								on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_has_unraised_levies_in_war')]"
-							}
-						}
-					}
-					blockoverride "shift_left_extra" {
-						replacement_shift_item = {}
-					}
-				}
-			}
+		# 	tooltipwidget = {
+		# 		SimpleContextualTooltipType = {
+		# 			lowpriotextcontext = "[AlertItem.GetTooltip]"
+		# 			blockoverride "title_button" {
+		# 				hint_button = {
+		# 					action_tooltip = {
+		# 						title = "OPEN_HINT"
+		# 						on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_has_unraised_levies_in_war')]"
+		# 					}
+		# 				}
+		# 			}
+		# 			blockoverride "shift_left_extra" {
+		# 				replacement_shift_item = {}
+		# 			}
+		# 		}
+		# 	}
 
-			using = green_alert
+		# 	using = green_alert
 
-			blockoverride "icon_texture" {
-				texture = "gfx/interface/icons/alerts_icons/has_unraised_levies_in_war.dds"
-			}
-		}
+		# 	blockoverride "icon_texture" {
+		# 		texture = "gfx/interface/icons/alerts_icons/has_unraised_levies_in_war.dds"
+		# 	}
+		# }
 
 		###################################
 		# We have max Diplomats available
