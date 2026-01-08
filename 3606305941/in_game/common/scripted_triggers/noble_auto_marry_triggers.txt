@@ -120,7 +120,7 @@ burgher_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 1
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
@@ -140,7 +140,7 @@ clergy_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 2
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
@@ -161,7 +161,7 @@ peasants_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 2
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
@@ -181,7 +181,7 @@ dhimmi_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 2
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
@@ -200,7 +200,7 @@ tribes_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 2
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
@@ -220,7 +220,7 @@ cossacks_valid_for_auto_marry = {
 		age_in_years > 18
 		age_in_years < 25
 		any_close_relative = {
-			count < 3
+			count < 2
 			is_female = no  # As they won't carry on a dynasty
 			age_in_years > 16
 			age_in_years < 50
