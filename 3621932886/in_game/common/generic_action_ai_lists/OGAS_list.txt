@@ -1,0 +1,8 @@
+﻿OGAS_list = {
+	potential = {
+		is_ai = no
+	}
+	actions = {
+		OGAS_Add_Road_Departure
+	}
+}

@@ -1,0 +1,59 @@
+﻿OGAS_Add_Road_Departure = {
+	type = situation
+	show_message = no
+	potential = {
+		#this scope is invalid not country
+		#is_ai ?= no
+	}
+	allow = {
+		#this scope is invalid not country
+		#is_ai ?= no
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = {data = name}
+		visible = {
+			situation:OGAS = this
+		}
+	}
+	select_trigger = {
+		looking_for_a = location
+		target_flag = target
+		name = "choose_location"
+		none_available_msg_key = "no_locations_available"
+		column = {data = name}
+		visible = {
+			owner ?= scope:actor
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				scope:target ?= {
+					has_variable = OGAS_Auto_Road_Departure_Mark
+				}
+			}
+			scope:target ?= {
+				remove_variable = OGAS_Cache_Auto_Road_Complete
+				remove_variable = OGAS_Auto_Road_Departure_Mark
+			}
+		}
+		else = {
+			scope:target ?= {
+				set_variable = OGAS_Cache_Auto_Road_Complete
+				set_variable = OGAS_Auto_Road_Departure_Mark
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+	ai_prerequisite = {
+        always = no
+    }
+}

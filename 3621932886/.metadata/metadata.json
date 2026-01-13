@@ -1,0 +1,11 @@
+﻿{
+	"name":	"OGAS",
+	"id":	"OGAS",
+	"version":	"20251205",
+	"supported_game_version":	"1.0.10",
+	"short_description":	"OGAS (early access), Auto Road Builder",
+	"tags":	["Fixes", "Gameplay", "Utilities"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

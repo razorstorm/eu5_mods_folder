@@ -584,25 +584,25 @@ types AlertManager {
 		# Disease affecting your country
 		###########################
 
-		alert_banner = {
-			name = "has_disease"
+		# alert_banner = {
+		# 	name = "has_disease"
 
-			action_tooltip = {
-				click_type = left
-				title = "ALERT_CTA_LEFT_CLICK"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[OpenLateralView('diseases')]"
-			}
+		# 	action_tooltip = {
+		# 		click_type = left
+		# 		title = "ALERT_CTA_LEFT_CLICK"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[OpenLateralView('diseases')]"
+		# 	}
 
-			onmousehierarchyenter = "[SetHighlightedTab('geography_group')]"
-			onmousehierarchyleave = "[ResetHighlightedTab]"
+		# 	onmousehierarchyenter = "[SetHighlightedTab('geography_group')]"
+		# 	onmousehierarchyleave = "[ResetHighlightedTab]"
 
-			using = red_alert
+		# 	using = red_alert
 
-			blockoverride "icon_texture" {
-				texture = "gfx/interface/icons/alerts_icons/disease_outbreak.dds"
-			}
-		}
+		# 	blockoverride "icon_texture" {
+		# 		texture = "gfx/interface/icons/alerts_icons/disease_outbreak.dds"
+		# 	}
+		# }
 
 		###########################
 		# Constructions missing input

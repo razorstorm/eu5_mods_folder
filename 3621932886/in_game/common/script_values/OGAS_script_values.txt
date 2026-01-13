@@ -1,0 +1,116 @@
+﻿proximity_prediction = {
+	#if road source location is constructing new road, must use proximity_prediction marked before, because proximity now is not the best
+	if = {
+		limit = {
+			has_variable = OGAS_Cache_Auto_Road_Ongoing
+		}
+		value = var:OGAS_Cache_Auto_Road_Ongoing
+	}
+	#only those compeled location or some port location which had better proximity from sea
+	else = {
+		value = proximity
+	}
+	subtract = {
+		value = 1
+		add = {
+			#all buff of distance_from_capital
+			add = owner.modifier:global_distance_from_capital_cost_modifier
+			add = owner.modifier:land_cost_on_distance_from_capital_modifier
+			add = modifier:local_distance_from_capital_cost_modifier
+			#topography and vegetation do not have distance_from_capital_cost_modifier, i think it is one half of movement_cost
+			add = {
+				if = {
+					limit = {
+						topography = mountains
+					}
+					value = 0.5
+				}
+				if = {
+					limit = {
+						topography = hills
+					}
+					value = 0.25
+				}
+				if = {
+					limit = {
+						topography = plateau
+					}
+					value = 0.125
+				}
+				if = {
+					limit = {
+						topography = wetlands
+					}
+					value = 0.25
+				}
+			}
+		}
+		multiply = {
+			value = owner.modifier:road_cost_on_distance_from_capital
+			if = {
+				limit = {
+					owner = {
+						has_advance = railroad_advance
+					}
+				}
+				subtract = 15
+			}
+			else_if = {
+				limit = {
+						owner = {
+							has_advance = modern_road_advance
+					}
+				}
+				subtract = 10
+			}
+			else_if = {
+				limit = {
+						owner = {
+							has_advance = paved_road_advance
+					}
+				}
+				subtract = 5
+			}
+			else_if = {
+				limit = {
+						owner = {
+							has_advance = road_building
+					}
+				}
+				subtract = 0
+			}
+		}
+	}
+}
+OGAS_deposit_gold = {
+	value = monthly_balance
+	multiply = 12
+	#00_hardcoded build_gravel_road
+	if = {
+		limit = {
+			has_advance = road_building
+		}
+		min = 500
+	}
+	#00_hardcoded build_paved_road
+	if = {
+		limit = {
+			has_advance = paved_road_advance
+		}
+		min = 1250
+	}
+	#00_hardcoded build_modern_road
+	if = {
+		limit = {
+			has_advance = modern_road_advance
+		}
+		min = 2500
+	}
+	#00_hardcoded build_railroad
+	if = {
+		limit = {
+			has_advance = railroad_advance
+		}
+		min = 5000
+	}
+}

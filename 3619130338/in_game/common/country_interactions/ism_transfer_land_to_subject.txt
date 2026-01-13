@@ -1,5 +1,5 @@
 ﻿transfer_land_to_subject = {
-    type = subject
+    type = diplomacy
     category = CATEGORY_SUBJECT_ACTIONS
     ai_tick = never
     use_enroute = no

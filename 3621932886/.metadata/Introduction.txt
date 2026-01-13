@@ -1,0 +1,21 @@
+您现在可以完全放弃修路，全部交由OGAS代管！将游戏中无聊的操作放在脑后，现在你可以将精力放在军事上！
+
+OGAS是一款起源于《维多利亚3》的著名MOD，旨在为玩家提供大量自动化工作，并通过计算机计算以达到最优效率。现在本MOD正在加入《欧陆风云5》，并现已推出包含自动修建道路的先行版本！立即订阅，并在未来享受更多实用功能！
+
+如何使用：
+1.订阅本MOD，进入游戏。本MOD对版本友好，并且不会有兼容性问题。
+2.等待一个月，进入OGAS局势。
+3.您现在可以看到OGAS正在计算的道路信息。点击“开始修路”，OGAS即可立即开始修路。如果您的资金不够，可以再次点击暂停。
+4.OGAS将会从首都出发计算道路。如果你有海外领土，或者有规划好的远距离港口，点击“新增道路起点”选择你的港口城市。
+5.真是一种享受。
+
+You can now completely abandon road construction and leave it all to OGAS! Put tedious in-game tasks behind you—now you can focus your energy on military affairs!
+
+OGAS is a renowned mod originating from Victoria III, designed to automate numerous tasks for players and achieve optimal efficiency through computational algorithms. This mod is now being integrated into Europa Universalis V, with an early access version featuring automatic road construction already available! Subscribe now to enjoy more practical features in the future!
+
+How to Use:
+1. Subscribe to this mod and launch the game. This mod is version-friendly and will not cause compatibility issues.
+2. Wait one month to enter the OGAS situation.
+3. You can now view road information being calculated by OGAS. Click “Start Road Building” for immediate construction. If funds are insufficient, click again to pause.
+4. OGAS will calculate roads starting from your capital. For overseas territories or planned long-distance ports, click “Add New Road Start” to select your port city.
+5. Pure bliss.

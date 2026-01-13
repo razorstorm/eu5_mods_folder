@@ -1,0 +1,55 @@
+situation_panel = {
+
+	##################################### TOP HEADER #####################################
+	
+	##################################### MAIN IMAGE #####################################
+
+	##################################### TAB NAME #####################################
+
+	##################################### SUBHEADER #####################################
+
+	##################################### MAIN CONTENT #####################################
+	blockoverride "situation_panel_main_content" {
+		situation_card_expandable = {
+			blockoverride "header_icon" {
+			}
+			blockoverride "header_text" {
+				text = "OGAS_Introduction_Title"
+			}
+			blockoverride "bottom_content" {
+				text_multi = {
+					margin = {15 0}
+					layoutpolicy_horizontal = expanding
+					max_width = 400
+					autoresize = yes
+					text = "OGAS_Introduction"
+				}
+			}
+		}
+	}
+	blockoverride "situation_panel_main_content_bottom" {
+		
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "OGAS_Auto_Road_Initialize_Button"
+				tooltip = "OGAS_Auto_Road_Initialize_TT"
+
+				onclick = "[GetScriptedGui('OGAS_Auto_Road_Initialize_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+				text = "[SelectLocalization(EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('OGAS_Auto_Road_Construct').GetValue,'(CFixedPoint)0'), 'OGAS_Auto_Road_Construct_Button_Start','OGAS_Auto_Road_Construct_Button_Pause')]"
+				tooltip = "OGAS_Auto_Road_Construct_Button_TT"
+				
+				onclick = "[GetScriptedGui('OGAS_Auto_Road_Construct_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+	}
+}

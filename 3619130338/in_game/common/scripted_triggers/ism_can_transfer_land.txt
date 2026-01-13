@@ -88,10 +88,10 @@ can_transfer_land = {
 # ARGS: $giver$:country, $receiver$:country
 allow_transfer_land = {
     # Cannot take land from non-colonial subjects
-    OR = {
-        NOT = { scope:actor = $receiver$ }
-        $giver$ = { is_subject_type = colonial_nation }
-    }
+    # OR = {
+    #     NOT = { scope:actor = $receiver$ }
+    #     $giver$ = { is_subject_type = colonial_nation }
+    # }
     OR = {
         # Can always transfer from colonial nations
         $giver$ = { is_subject_type = colonial_nation }

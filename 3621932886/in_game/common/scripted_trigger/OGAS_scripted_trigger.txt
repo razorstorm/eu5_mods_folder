@@ -1,0 +1,12 @@
+﻿using_gravel_road = {
+	has_advance = road_building
+}
+using_paved_road_advance = {
+	has_advance = paved_road_advance
+}
+using_modern_road_advance = {
+	has_advance = modern_road_advance
+}
+using_railroad_advance = {
+	has_advance = railroad_advance
+}

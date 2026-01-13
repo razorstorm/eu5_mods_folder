@@ -1,0 +1,217 @@
+﻿ordered_neighbor_location = {
+	limit = {
+		is_ownable = yes
+		#owner = root.owner
+		proximity_prediction > root.proximity
+	}
+	order_by = proximity_prediction
+	#position = 0
+	root = {
+		add_to_variable_list = {
+		name = border_list
+		target = prev
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_advance = railroad_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:railroad
+				from = this
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = modern_road_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:modern_road
+				from = this
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = paved_road_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:paved_road
+				from = this
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = road_building
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:gravel_road
+				from = this
+				to = prev
+			}
+		}
+	}
+}
+
+#test
+ordered_neighbor_location = {
+	limit = {
+		is_ownable = yes
+		owner = root.owner
+		proximity_prediction > root.proximity
+	}
+	order_by = proximity_prediction
+	root = {
+		add_to_variable_list = {
+		name = border_list
+		target = prev
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_advance = railroad_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:railroad
+				from = root
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = modern_road_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:modern_road
+				from = root
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = paved_road_advance
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:paved_road
+				from = root
+				to = prev
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_advance = road_building
+			}
+		}
+		owner = {
+			construct_road = {  
+				road_type = road_type:gravel_road
+				from = root
+				to = prev
+			}
+		}
+	}
+}
+every_neighbor_location = {
+	limit = {
+		owner = root.owner
+		proximity_prediction > prev.proximity
+	}
+	root = {
+		add_to_variable_list = {
+		name = border_list
+		target = prev
+		}
+	}
+}
+debug_list_onging_complete = {
+	clear_variable_list = Complete_list
+	clear_variable_list = Ongoing_list
+	every_owned_location = {
+		if = {
+			limit = {
+				has_variable = OGAS_Cache_Auto_Road_Ongoing
+			}
+			root = {
+				add_to_variable_list = {
+				name = Ongoing_list
+				target = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_variable = OGAS_Cache_Auto_Road_Complete
+			}
+			root = {
+				add_to_variable_list = {
+				name = Complete_list
+				target = prev
+				}
+			}
+		}
+	}
+}
+every_neighbor_location = {
+	limit = {
+		#has_variable = OGAS_Cache_Auto_Road_Ongoing
+		not = {
+			is_ownable = yes
+			owner = root.owner
+			proximity_prediction > prev.proximity
+		}
+	}
+	#set_variable = OGAS_Cache_Auto_Road_Complete
+	#remove_variable = OGAS_Cache_Auto_Road_Ongoing
+			root = {
+				add_to_variable_list = {
+				name = any_proximity_hight_list
+				target = prev
+				}
+			}
+}
+debug_Ongoing_Location_Check_Complete ={
+	if = {
+		limit = {
+			has_variable = OGAS_Cache_Auto_Road_Ongoing
+			not = {
+				any_neighbor_location = {
+					is_ownable = yes
+					owner = root
+					proximity_prediction > prev.proximity
+				}
+			}
+		}
+		set_variable = OGAS_Cache_Auto_Road_Complete
+		remove_variable = OGAS_Cache_Auto_Road_Ongoing
+	}
+}

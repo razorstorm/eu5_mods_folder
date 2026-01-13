@@ -1,0 +1,60 @@
+﻿OGAS = {
+	monthly_spawn_chance = 1
+	#hint_tag = hint_OGAS
+	
+	can_start = {
+		#this scope is situation not country
+		#is_ai = no
+	}
+	
+	can_end = {
+		always = no
+	}
+	
+	visible = {
+		is_ai = no
+	}
+
+	on_start = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			OGAS_Auto_Road_Initialize = yes
+		}
+	}
+
+	on_monthly = {
+	}
+
+	tooltip = {
+		custom_tooltip = "OGAS_desc"
+	}
+
+	is_data_map = yes
+	
+	map_color = {
+		#this scope is location
+		if = {
+			limit = {
+				has_variable = OGAS_Auto_Road_Departure_Mark
+			}
+			value = define:NMapColors|FULLYBUILD_MAP_COLOR
+		}
+		else_if = {
+			limit = {
+				has_variable = OGAS_Cache_Auto_Road_Complete
+			}
+			value = define:NMapColors|MAP_COLOR_HIGH
+		}
+		else_if = {
+			limit = {
+				has_variable = OGAS_Cache_Auto_Road_Ongoing
+			}
+			value = define:NMapColors|MAP_COLOR_LOW
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+}

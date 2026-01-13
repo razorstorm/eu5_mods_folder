@@ -1,0 +1,12 @@
+﻿{
+	"name":	"Better Locations Ledger",
+	"id":	"better.locations.ledger",
+	"version":	"0.1",
+	"supported_game_version":	"1.0.*",
+	"short_description":	"Expands the functionality of the Locations tab in the Ledger.",
+	"tags":	["User Interface"],
+	"picture": "thumbnail.png",
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

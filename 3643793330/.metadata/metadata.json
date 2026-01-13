@@ -1,0 +1,11 @@
+﻿{
+	"name":	"No more Fort Spam",
+	"id":	"Fortspam",
+	"version":	"1",
+	"supported_game_version":	"1.0.10",
+	"short_description":	"Country Ranks now give less fortlimit",
+	"tags":	["Gameplay"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

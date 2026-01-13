@@ -1,0 +1,34 @@
+﻿OGAS_Auto_Road_Initialize_sgui = {
+	scope = country
+	is_shown = { always = yes }
+	is_valid = { always = yes }
+	effect = {
+		OGAS_Auto_Road_Initialize = yes
+	}
+}
+OGAS_Auto_Road_Construct_sgui = {
+	scope = country
+	is_shown = { 
+		always = yes 
+	}
+	effect = {
+		if = {
+			limit = {
+				var:OGAS_Auto_Road_Construct = 1
+			}
+			set_variable = {
+				name = OGAS_Auto_Road_Construct
+				value = 0
+			}
+		}
+		else_if = {
+			limit = {
+				var:OGAS_Auto_Road_Construct = 0
+			}
+			set_variable = {
+				name = OGAS_Auto_Road_Construct
+				value = 1
+			}
+		}
+	}
+}
