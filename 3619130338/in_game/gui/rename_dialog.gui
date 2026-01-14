@@ -59,7 +59,7 @@ window = {
                                     # MODIFICATION: Save the text to a variable every time you type
                                     ontextchanged = "[GetVariableSystem.Set('renaming_new_name', GetTextFromSelfOrAnyChildEditbox(PdxGuiWidget.Self))]"
 
-                                    maxcharacters = 42
+                                    maxcharacters = 50
                                 }
 							}
 							# Keeping in case we desire random naming in the future...
@@ -76,6 +76,53 @@ window = {
 						}
 					}
 				}
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					margin = {30 0}
+					block "message_template_content" {
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							margin = {5 0}
+							using = message_text_box_background		
+							visible = yes
+
+							editbox_single = {
+								size = { 300 30 }
+
+								blockoverride "editbox_label" {
+									text = "[Localize('RENAME')] [RenameDialog.GetCountry.GetAdjectiveWithNoTooltip]"
+								}
+
+                                blockoverride "editbox_properties" {
+                                    name = "new_name"
+                                    tooltipwidget = {
+                                        LeftClickButtonTooltip = {
+                                            blockoverride "onclick_text" { text = "EDIT_COUNTRY_NAME_ADJECTIVE" }
+                                        }
+                                    }
+                                    # MODIFICATION: Save the text to a variable every time you type
+                                    ontextchanged = "[GetVariableSystem.Set('renaming_new_adjective', GetTextFromSelfOrAnyChildEditbox(PdxGuiWidget.Self))]"
+
+                                    maxcharacters = 50
+                                }
+							}
+							# Keeping in case we desire random naming in the future...
+							# icon_button_small_round = {
+							#	position = { 270 00 }
+							#	size = { 30 30 }			
+							#	tooltipwidget = {
+							#		LeftClickButtonTooltip = {
+							#			blockoverride "onclick_text" { text = "EDIT_NEWBORN_RANDOM_FIRST_NAME" } 
+							#		}
+							#	}
+							#	onclick = "[RenameDialog.GiveRandomName]"
+							# }
+						}
+					}
+				}
+
+                # Adding the ability to update adjective might not be necessary since adjectives seem to fix themselves automatically
 
 				hbox = {
 					margin = { 0 10 }
@@ -130,8 +177,16 @@ window = {
 
                             # MODIFICATION: Bypass C++ Check
                             # 1. Execute the rename command using the Country Tag and the text Variable
+                            # 1. Execute the rename command using the Country Tag and the text Variable
+                            # onclick = "[ExecuteConsoleCommand( Concatenate( 'effect c:', Concatenate( RenameDialog.GetCountry.GetTag, Concatenate( ' = { 
+                            #     change_country_name = \"', Concatenate( GetVariableSystem.Get('renaming_new_name'), '\" 
+                            #     change_country_adjective = \"', Concatenate( GetVariableSystem.Get('renaming_new_adjective'), '\" 
+                            # }' ) ) ) ) )]"
+                            # 1. Update name
                             onclick = "[ExecuteConsoleCommand( Concatenate( 'effect c:', Concatenate( RenameDialog.GetCountry.GetTag, Concatenate( ' = { change_country_name = \"', Concatenate( GetVariableSystem.Get('renaming_new_name'), '\" }' ) ) ) ) )]"
-                            # 2. Close the window
+                            # 2. Update adjective
+                            onclick = "[ExecuteConsoleCommand( Concatenate( 'effect c:', Concatenate( RenameDialog.GetCountry.GetTag, Concatenate( ' = { change_country_adjective = \"', Concatenate( GetVariableSystem.Get('renaming_new_adjective'), '\" }' ) ) ) ) )]"
+                            # 3. Close the window
                             onclick = "[DialogConfig.OnAccept]"
 
                             input_action = "confirm"
