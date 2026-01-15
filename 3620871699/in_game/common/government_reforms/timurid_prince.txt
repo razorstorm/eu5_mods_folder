@@ -45,3 +45,4 @@ timurid_prince = {
 	}
 	
 	years = 2
+}

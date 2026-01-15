@@ -5630,23 +5630,23 @@ types AlertManager {
 		# Unmarried Children
 		###################################
 
-		alert_banner = {
-			name = "has_unmarried_children"
+		# alert_banner = {
+		# 	name = "has_unmarried_children"
 
-			action_tooltip = {
-				click_type = left
-				title = "ALERT_HAS_UNMARRIED_CHILDREN_LEFT_CLICK"
-				using = snd_UI_alert_openAndCycle
-				on_action = "[AlertHasUnmarriedChildren.Next]"
-			}
+		# 	action_tooltip = {
+		# 		click_type = left
+		# 		title = "ALERT_HAS_UNMARRIED_CHILDREN_LEFT_CLICK"
+		# 		using = snd_UI_alert_openAndCycle
+		# 		on_action = "[AlertHasUnmarriedChildren.Next]"
+		# 	}
 
-			using = green_alert
-			using = alert_list_tooltip
+		# 	using = green_alert
+		# 	using = alert_list_tooltip
 
-			blockoverride "icon_texture" {
-				texture = "gfx/interface/icons/alerts_icons/unmarried_children.dds"
-			}
-		}
+		# 	blockoverride "icon_texture" {
+		# 		texture = "gfx/interface/icons/alerts_icons/unmarried_children.dds"
+		# 	}
+		# }
 
 		###################################
 		# Can Request Aid
@@ -5721,26 +5721,26 @@ types AlertManager {
 		# We Can Activate Avatar
 		###################################
 
-		# [SD] Made redundant by can_use_religious_action
-		# alert_banner = {
-		# 	name = "can_activate_avatar"
+		[SD] Made redundant by can_use_religious_action
+		alert_banner = {
+			name = "can_activate_avatar"
 
-		# 	action_tooltip = {
-		# 		click_type = left
-		# 		title = "ALERT_CTA_LEFT_CLICK"
-		# 		using = snd_UI_alert_openAndCycle
-		# 		on_action = "[OpenLateralView('country_religion')]"
-		# 	}
+			action_tooltip = {
+				click_type = left
+				title = "ALERT_CTA_LEFT_CLICK"
+				using = snd_UI_alert_openAndCycle
+				on_action = "[OpenLateralView('country_religion')]"
+			}
 
-		# 	using = green_alert
+			using = green_alert
 
-		# 	blockoverride "icon_texture" {
-		# 		texture = "[GetReligionIcon(GetPlayer.GetReligion)]"
-		# 	}
+			blockoverride "icon_texture" {
+				texture = "[GetReligionIcon(GetPlayer.GetReligion)]"
+			}
 
-		# 	onmousehierarchyenter = "[SetHighlightedTab('society_group')]"
-		# 	onmousehierarchyleave = "[ResetHighlightedTab]"
-		# }
+			onmousehierarchyenter = "[SetHighlightedTab('society_group')]"
+			onmousehierarchyleave = "[ResetHighlightedTab]"
+		}
 
 		###################################
 		# We Can Invite Religious Figure
@@ -5870,25 +5870,25 @@ types AlertManager {
 		# We can ask for money
 		###################################
 
-		# alert_banner = {
-		# 	name = "can_ask_for_money"
+		alert_banner = {
+			name = "can_ask_for_money"
 
-		# 	action_tooltip = {
-		# 		click_type = left
-		# 		title = "ALERT_CTA_LEFT_CLICK"
-		# 		using = snd_UI_alert_openAndCycle
-		# 		on_action = "[AlertCanAskForMoney.OnAction]"
-		# 	}
+			action_tooltip = {
+				click_type = left
+				title = "ALERT_CTA_LEFT_CLICK"
+				using = snd_UI_alert_openAndCycle
+				on_action = "[AlertCanAskForMoney.OnAction]"
+			}
 
-		# 	using = green_alert
+			using = green_alert
 
-		# 	blockoverride "icon_texture" {
-		# 		texture = "gfx/interface/icons/diplomatic_actions/friendly_actions.dds"
-		# 	}
+			blockoverride "icon_texture" {
+				texture = "gfx/interface/icons/diplomatic_actions/friendly_actions.dds"
+			}
 
-		# 	onmousehierarchyenter = "[SetHighlightedTab('diplomacy_group')]"
-		# 	onmousehierarchyleave = "[ResetHighlightedTab]"
-		# }
+			onmousehierarchyenter = "[SetHighlightedTab('diplomacy_group')]"
+			onmousehierarchyleave = "[ResetHighlightedTab]"
+		}
 
 		###################################
 		# We can ask subject to improve cultural view
